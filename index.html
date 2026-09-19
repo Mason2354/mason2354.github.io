@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fun Practice Site</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #2da44e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #2c974b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Hello, World! 👋</h1>
+        <p>This is my fun practice website hosted 100% free on GitHub Pages.</p>
+        
+        <button onclick="changeText()">Click Me!</button>
+        <p id="fun-fact"></p>
+    </div>
+
+    <script>
+        function changeText() {
+            const facts = [
+                "HTML stands for HyperText Markup Language!",
+                "The first web page ever made is still online!",
+                "CSS makes things look pretty, JavaScript makes them work!",
+                "GitHub Pages is free forever for static sites!"
+            ];
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("fun-fact").innerText = randomFact;
+        }
+    </script>
+
+</body>
+</html>
